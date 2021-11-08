@@ -7,8 +7,8 @@ const authorSchema = new mongoose.Schema(
       required: true,
       min: 3,
       max: 20,
-      unique: true,
     },
+    posts: [{ title: String, text: String }],
   },
   { timestamps: true }
 );
