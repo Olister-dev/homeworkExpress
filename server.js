@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-// const morgan = require("morgan");
+
 const authorRouter = require("./routes/authors.js");
 
 const port = 3000;
@@ -15,7 +15,6 @@ mongoose.connect(process.env.MONGO_URL, () => {
 
 //body parser midleware
 app.use(express.json());
-// app.use(morgan("common"));
 
 app.use("/author", authorRouter);
 
